@@ -5,8 +5,10 @@ import {ResponseValues} from '../../components/ResponseValues';
 export const Home = () => {
     return (
         <Container>
-            <RequestValues />
-            <ResponseValues />
+            
+                <RequestValues />
+                <ResponseValues />
+            
         </Container>
     );
     };
