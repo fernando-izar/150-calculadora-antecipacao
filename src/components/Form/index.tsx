@@ -17,14 +17,13 @@ export const Form = () => {
     <Container>
       <form onSubmit={handleSubmit(onSubmitRequest)}>
         <p>Informe o valor da venda *</p>
-        <input className="input" placeholder="Valor da venda" type="text" {...register("amount")} />
+        <input className="input" placeholder="Valor da venda" type="number" {...register("amount")} />
         <p>{errors.amount?.message}</p>
         <p>Em quantas parcelas *</p>
-        <input className="input" placeholder="Quantidade de parcelas"  type="text" {...register("installments")} />
-        <p className="installments-number-advise">Máximo de 12 parcelas</p>
+        <input className="input" placeholder="Quantidade de parcelas"  type="number" {...register("installments")} />
         <p>{errors.installments?.message}</p>
         <p>Informe o percentual de MDR *</p>
-        <input className="input" placeholder="Percentual de MDR" type="text" {...register("mdr")} />
+        <input className="input" placeholder="Percentual de MDR" type="number" {...register("mdr")} />
         <p>{errors.mdr?.message}</p>
         <button className="form-button">Submit</button>
       </form>

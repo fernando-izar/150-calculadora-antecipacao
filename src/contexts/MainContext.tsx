@@ -8,6 +8,7 @@ interface IMainProviderProps {
 }
 
 interface IMainProviderData {
+    defaultRequest: DefaultRequest;
     defaultResponse: DefaultResponse;
     setDefaultResponse: React.Dispatch<React.SetStateAction<DefaultResponse>>
     onSubmitRequest: (data: DefaultRequest) => Promise<void>;
@@ -16,6 +17,11 @@ interface IMainProviderData {
 export const MainContext = createContext<IMainProviderData>({} as IMainProviderData);
 
 export const MainProvider = ({ children }: IMainProviderProps) => { 
+    const [defaultRequest, setDefaultRequest] = useState<DefaultRequest>({
+        amount: 0,
+        installments: 0,
+        mdr: 0,
+    });
     const [defaultResponse, setDefaultResponse] = useState<DefaultResponse>({
         "1": 0,
         "15": 0,
@@ -26,6 +32,7 @@ export const MainProvider = ({ children }: IMainProviderProps) => {
     const onSubmitRequest = async (data: DefaultRequest) => {
         try {
             const { data: responseData } = await api.post("", data);
+            setDefaultRequest(data);
             setDefaultResponse(responseData);
         } catch (error) {
             console.log(error);
@@ -33,7 +40,7 @@ export const MainProvider = ({ children }: IMainProviderProps) => {
     };
     
     return (
-        <MainContext.Provider value={{ defaultResponse, setDefaultResponse, onSubmitRequest }}>
+        <MainContext.Provider value={{ defaultRequest, defaultResponse, setDefaultResponse, onSubmitRequest }}>
             {children}
         </MainContext.Provider>
     );
