@@ -17,22 +17,23 @@ export const Form = () => {
     <Container>
       <form onSubmit={handleSubmit(onSubmitRequest)}>
         <div>
-          <p className="input-label">Informe o valor da venda *</p>
-          <input className="input" type="number" {...register("amount")} />
-          <p className="errors"> {errors.amount?.message ? "deve ser um número maior ou igual a 1000" : false}</p>
+          <label htmlFor="input-amount" className="input-label">Informe o valor da venda *</label>
+          <input className="input" type="number" id="input-amount" {...register("amount")} />
+          <p className="errors">{errors.amount?.message}</p>
         </div>
         <div>
-          <p className="input-label">Em quantas parcelas *</p>
-          <input className="input" type="number" {...register("installments")} />
+          <label htmlFor="input-installments" className="input-label">Em quantas parcelas *</label>
+          <input className="input" type="number" id="input-installments" {...register("installments")} />
           <p className="max-installments">Máximo de 12 parcelas</p>
-          <p className="errors"> {errors.installments?.message ? "deve ser um número entre 1 e 12" : false}</p>
+          <p className="errors">{errors.installments?.message}</p>
+
         </div>
         <div>
-          <p className="input-label">Informe o percentual de MDR *</p>
-          <input className="input" type="number" {...register("mdr")} />
-          <p className="errors"> {errors.mdr?.message ? "deve ser um número entre 1 e 100" : false}</p>
+          <label htmlFor="input-mdr" className="input-label">Informe o percentual de MDR *</label>
+          <input className="input" type="number" id="input-mdr" {...register("mdr")} />
+          <p className="errors">{errors.mdr?.message}</p>
         </div>
-        <button className="form-button">Submit</button>
+        <button className="form-button">Calcular</button>
       </form>
     </Container>
   );

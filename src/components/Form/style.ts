@@ -7,9 +7,10 @@ export const Container = styled.div`
         flex-direction: column;
         gap: 15px;
         margin-top: 20px;
-
         
         div {
+            display: flex;
+            flex-direction: column;
             input {
                 width: 320px;
                 height: 40px;
