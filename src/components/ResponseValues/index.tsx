@@ -1,7 +1,5 @@
-import { async } from "q";
 import { useEffect, useState, useContext } from "react";
 import { MainContext } from "../../contexts/MainContext";
-import { CustomRequest } from "../../interfaces/requests";
 import { api } from "../../services/api";
 import { Container } from "./style";
 
@@ -39,10 +37,10 @@ export const ResponseValues = () => {
   return (
     <Container>
       <p className="title"><b>VOCÊ RECEBERÁ:</b></p>
-      <p className="values">Amanhã: <b>R${defaultResponse["1"].toFixed(2)}</b></p>
-      <p className="values">Em 15 dias: <b>R${defaultResponse["15"].toFixed(2)}</b></p>
-      <p className="values">Em 30 dias: <b>R${defaultResponse["30"].toFixed(2)}</b></p>
-      <p className="values">Em 90 dias: <b>R${defaultResponse["90"].toFixed(2)}</b></p>
+      <p className="values">Amanhã: <b>R${defaultResponse["1"]?.toFixed(2)}</b></p>
+      <p className="values">Em 15 dias: <b>R${defaultResponse["15"]?.toFixed(2)}</b></p>
+      <p className="values">Em 30 dias: <b>R${defaultResponse["30"]?.toFixed(2)}</b></p>
+      <p className="values">Em 90 dias: <b>R${defaultResponse["90"]?.toFixed(2)}</b></p>
 
       <p className="values">
         Em

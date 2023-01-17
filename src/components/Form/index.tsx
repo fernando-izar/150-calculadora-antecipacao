@@ -33,7 +33,7 @@ export const Form = () => {
           <input className="input" type="number" id="input-mdr" {...register("mdr")} />
           <p className="errors">{errors.mdr?.message}</p>
         </div>
-        <button className="form-button">Submit</button>
+        <button className="form-button">Calcular</button>
       </form>
     </Container>
   );
