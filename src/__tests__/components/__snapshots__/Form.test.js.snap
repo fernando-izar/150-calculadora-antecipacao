@@ -2,7 +2,7 @@
 
 exports[`Form should not have unexpected changes 1`] = `
 <div
-  className="sc-bcXHqe Expvn"
+  className="sc-bcXHqe jYaKrx"
 >
   <form
     onSubmit={[Function]}
