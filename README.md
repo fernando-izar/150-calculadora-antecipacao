@@ -25,7 +25,8 @@ Builds the app for production to the `build` folder.\
 
 ## Deploy
 
-This app was deployed by vercell.
+https://calculadora-antecipacao-six.vercel.app/  
+
 
 ## Technologies
 
