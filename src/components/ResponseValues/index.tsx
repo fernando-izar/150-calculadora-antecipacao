@@ -38,16 +38,16 @@ export const ResponseValues = () => {
 
   return (
     <Container>
-      <h1>VOCÊ RECEBERÁ:</h1>
-      <p>Amanhã: R${defaultResponse["1"]}</p>
-      <p>Em 15 dias: R${defaultResponse["15"]}</p>
-      <p>Em 30 dias: R${defaultResponse["30"]}</p>
-      <p>Em 90 dias: R${defaultResponse["90"]}</p>
+      <p className="title"><b>VOCÊ RECEBERÁ:</b></p>
+      <p className="values">Amanhã: <b>R${defaultResponse["1"].toFixed(2)}</b></p>
+      <p className="values">Em 15 dias: <b>R${defaultResponse["15"].toFixed(2)}</b></p>
+      <p className="values">Em 30 dias: <b>R${defaultResponse["30"].toFixed(2)}</b></p>
+      <p className="values">Em 90 dias: <b>R${defaultResponse["90"].toFixed(2)}</b></p>
 
-      <p>
+      <p className="values">
         Em
-        <input onChange={onChangeCustomRequest} type="number" />
-        dias: R${customResponse}
+        <input className="customInput" onChange={onChangeCustomRequest} type="number" />
+        dias: <b>R${customRequest > 0 ? customResponse.toFixed(2) : 0}</b>
       </p>
 
 
