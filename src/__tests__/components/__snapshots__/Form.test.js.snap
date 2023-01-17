@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should not have unexpected changes 1`] = `
+<div
+  className="sc-bcXHqe jYaKrx"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div>
+      <label
+        className="input-label"
+        htmlFor="input-amount"
+      >
+        Informe o valor da venda *
+      </label>
+      <input
+        className="input"
+        id="input-amount"
+        name="amount"
+        onBlur={[Function]}
+        onChange={[Function]}
+        type="number"
+      />
+      <p
+        className="errors"
+      />
+    </div>
+    <div>
+      <label
+        className="input-label"
+        htmlFor="input-installments"
+      >
+        Em quantas parcelas *
+      </label>
+      <input
+        className="input"
+        id="input-installments"
+        name="installments"
+        onBlur={[Function]}
+        onChange={[Function]}
+        type="number"
+      />
+      <p
+        className="max-installments"
+      >
+        Máximo de 12 parcelas
+      </p>
+      <p
+        className="errors"
+      />
+    </div>
+    <div>
+      <label
+        className="input-label"
+        htmlFor="input-mdr"
+      >
+        Informe o percentual de MDR *
+      </label>
+      <input
+        className="input"
+        id="input-mdr"
+        name="mdr"
+        onBlur={[Function]}
+        onChange={[Function]}
+        type="number"
+      />
+      <p
+        className="errors"
+      />
+    </div>
+    <button
+      className="form-button"
+    >
+      Calcular
+    </button>
+  </form>
+</div>
+`;
